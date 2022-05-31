@@ -8,9 +8,10 @@ bests_sample_size = 10
 bests_sample_use_size = 3
 start_sample = [0.]
 results = []
-qnt_results = 2
+qnt_results = 5
 max_repetitive_tries = 5
 MAX_GENERATIONS = 200
+
 
 def equation(x):
     return eval(equacao)
@@ -101,7 +102,7 @@ while len(results) < qnt_results:
         new_generations.reverse()
         if generation_number >= MAX_GENERATIONS:
             print("TRY CHANGING THE PARAMETERS")
-            print("The best values for x are: " + results)
+            print("The best values for x are: ", results)
             print(f'==== BEST RESULT {len(results) + 1} IN GENERATION {generation_number} ====')
             print(f'BEST SAMPLE RESULT = {last_best_result}\n\n\n')
             exit(1)
