@@ -77,12 +77,15 @@ def mutate_variations(bests_sample):
     x_elements = []
     # Para cada um em na lista de melhores amostras
     for subject in bests_sample:
+        # Anexa as melhores amostras
         x_elements.append(subject[1])
-
+    # Recolhe a variação default
     x_variation = default_variation
+    # Se a variação default for maior que a variancia entre as melhores amostras
     if default_variation > np.var(x_elements):
+        # Atualiza a variação x como sendo a variancia entre as melhores amostras
         x_variation = np.var(x_elements)
-
+    # retorna a nova variação
     return [x_variation]
 
 # iniciando o algoritmo na geração 0
@@ -148,9 +151,13 @@ while len(results) < qnt_results:
             # Cria novas gerações com a x_variation baseada na mutação gerada
             new_generations = new_generations + create_new_generation(mutations[0][0],
                                                                       best_equations)
+        # Ordena as novas gerações
         new_generations.sort()
+        # Reverte a ordem, pois recompensas maiores são melhores
         new_generations.reverse()
+        # Se alcançou o número máximo de gerações
         if generation_number >= MAX_GENERATIONS-1:
+            # Mostra os resultados obtidos
             print("TRY CHANGING THE PARAMETERS")
             print("The best values for x are: ", results)
             print(f'==== BEST RESULT {len(results) + 1} IN GENERATION {generation_number} ====')
@@ -164,8 +171,11 @@ while len(results) < qnt_results:
             print(f'==== BEST RESULT {len(results) + 1} IN GENERATION {generation_number} ====')
             print(f'BEST SAMPLE RESULT = {last_best_result}\n\n\n')
             exit(1)
+# Cria uma lista vazia com as melhores equações
 best_equations = []
+# Para cada elemento em nos usaveis das mutações
 for element in mutations[1]:
+    # Anexa em o valor em best_equations
     best_equations.append(element[1])
-
+# Mostra os resultados
 print("The best values for x are: " , results)
