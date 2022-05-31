@@ -4,13 +4,13 @@ import numpy as np
 
 population_size = 1000
 default_variation = 1000
-bests_sample_size = 100
-bests_sample_use_size = 10
+bests_sample_size = 10
+bests_sample_use_size = 3
 start_sample = [0.]
 results = []
 qnt_results = 2
-max_repetitive_tries = 20
-
+max_repetitive_tries = 5
+MAX_GENERATIONS = 200
 
 def equation(x):
     return eval(equacao)
@@ -63,7 +63,7 @@ def mutate_variations(bests_sample):
 
 
 generation_number = 0
-equacao = input("Digite o polinômio desejado")
+equacao = input("Digite o polinômio desejado\n")
 while len(results) < qnt_results:
     gen0 = create_new_generation(default_variation, start_sample)
     mutations = mutate_best_samples(gen0)
@@ -99,7 +99,12 @@ while len(results) < qnt_results:
                                                                       best_equations)
         new_generations.sort()
         new_generations.reverse()
-
+        if generation_number >= MAX_GENERATIONS:
+            print("TRY CHANGING THE PARAMETERS")
+            print("The best values for x are: " + results)
+            print(f'==== BEST RESULT {len(results) + 1} IN GENERATION {generation_number} ====')
+            print(f'BEST SAMPLE RESULT = {last_best_result}\n\n\n')
+            exit(1)
         mutations = mutate_best_samples(new_generations)
         generation_number = generation_number + 1
 
@@ -107,4 +112,4 @@ best_equations = []
 for element in mutations[1]:
     best_equations.append(element[1])
 
-print(results)
+print("The best values for x are: " + results)
