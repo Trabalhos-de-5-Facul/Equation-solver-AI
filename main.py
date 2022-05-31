@@ -1,3 +1,9 @@
+# Gabriel Gonçalves Mattos Santini   RA: 18189084
+# Gustavo Melo Cacau                 RA: 19091057
+# Henrique Victorino Dias            RA: 19030550
+# Lucas Rodrigues São João Miguel    RA: 19029297
+# Vinicius Rabelo Mancini            RA: 19006568
+
 import random
 import sys
 import numpy as np
@@ -8,9 +14,10 @@ bests_sample_size = 10
 bests_sample_use_size = 3
 start_sample = [0.]
 results = []
-qnt_results = 2
+qnt_results = 5
 max_repetitive_tries = 5
 MAX_GENERATIONS = 200
+result_variations = 0.1
 
 # Resolve a equação com o valor de x passado e retorna o resultados
 def equation(x):
@@ -125,7 +132,7 @@ while len(results) < qnt_results:
                     # Para cada resultado em results
                     for result in results:
                         # Se a variação entre o resultado e o melhor resultado anterior for maior que -0.1
-                        if 0.1 > result - last_best_result > -0.1:
+                        if 0.1 > result - last_best_result > -result_variations:
                             # Printa essa variação
                             print(result - last_best_result)
                             # Reseta o melhor resultado anterior com um valor exorbitante
@@ -163,19 +170,16 @@ while len(results) < qnt_results:
             print(f'==== BEST RESULT {len(results) + 1} IN GENERATION {generation_number} ====')
             print(f'BEST SAMPLE RESULT = {last_best_result}\n\n\n')
             exit(1)
+        # Cria mutações baseadas nas novas gerações
         mutations = mutate_best_samples(new_generations)
+        # Soma um no numero de gerações
         generation_number = generation_number + 1
+    # Se chegar no maximo de gerações
     if generation_number >= MAX_GENERATIONS:
             print("TRY CHANGING THE PARAMETERS")
             print("The best values for x are: ", results)
             print(f'==== BEST RESULT {len(results) + 1} IN GENERATION {generation_number} ====')
             print(f'BEST SAMPLE RESULT = {last_best_result}\n\n\n')
             exit(1)
-# Cria uma lista vazia com as melhores equações
-best_equations = []
-# Para cada elemento em nos usaveis das mutações
-for element in mutations[1]:
-    # Anexa em o valor em best_equations
-    best_equations.append(element[1])
 # Mostra os resultados
 print("The best values for x are: " , results)
