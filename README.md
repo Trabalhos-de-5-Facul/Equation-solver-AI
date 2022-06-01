@@ -18,7 +18,7 @@
 - Durante a execução, será pedido ao usuário a inserção de uma função polinomial e a mesma deve ser inserida seguindo algumas regras. Por exemplo:
 		A expressão 3x^4+x^3-5x^2+46x-543 deverá ser digitada como: 
 		
-#### 				3 * x ** 4 + x ** 3 - 5 * x ** 2 + 46 * x - 543
+#### 				3 * x *\* 4 + x ** 3 - 5 * x *\* 2 + 46 * x - 543
 			
 - Em resumo, o símbolo '^' que representa a elevação de um número por outro deverá ser substituido por '**'
 
