@@ -13,19 +13,19 @@
 
 ##### - É necessaria a instalação da biblioteca numpy (pip install numpy)
 	
-- Uma vez com o numpy intalado, execute o arquivo "main.py"
+Uma vez com o numpy intalado, execute o arquivo "main.py"
  
-- Durante a execução, será pedido ao usuário a inserção de uma função polinomial e a mesma deve ser inserida seguindo algumas regras. Por exemplo:
+Durante a execução, será pedido ao usuário a inserção de uma função polinomial e a mesma deve ser inserida seguindo algumas regras. Por exemplo:
 		A expressão 3x^4+x^3-5x^2+46x-543 deverá ser digitada como: 
 		
 #### 				3 * x \*\* 4 + x ** 3 - 5 * x \*\* 2 + 46 * x - 543
 			
-- Em resumo, o símbolo '^' que representa a elevação de um número por outro deverá ser substituido por '**'
+Em resumo, o símbolo '^' que representa a elevação de um número por outro deverá ser substituido por '**'
 
-- O programa irá retornar aproximadamente as raizes desta função que seriam A = -4,15228364 e B = 3,40806689.
-- A principio o programa está configurado para retornas 2 resulados 
+O programa irá retornar aproximadamente as raizes desta função que seriam A = -4,15228364 e B = 3,40806689.
+A principio o programa está configurado para retornas 2 resulados 
 ##### - Outros exemplos simples para teste seriam x\*\*2 + 2\*x que tem como raiz -2 e 0 e 10 \*x\*\*2-5 \*x-30 que tem como raiz -1.5 e 2
-- Para calculo da Raizes utilizamos do Geogebra
+Para calculo da Raizes utilizamos do Geogebra
 	
 ##### - Logo no Inicio do programa existe variavéis configuraveis para alterar o comportamento das populações e de suas mutações que são:
 - population_size -> Tamanho das populações
