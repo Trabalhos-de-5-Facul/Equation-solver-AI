@@ -28,12 +28,12 @@
 - Para calculo da Raizes utilizamos do Geogebra
 	
 ##### - Logo no Inicio do programa existe variavéis configuraveis para alterar o comportamento das populações e de suas mutações que são:
-population_size -> Tamanho das populações
-default_variation -> Variação inicial das mutações 
-bests_sample_size -> Tamanho da amostra de análise para definir novos parametros de mutação 
-bests_sample_use_size -> Tamanho da amostra para definir os novos melhores individuos e reproduzi-los e gerações futuras
-start_sample -> Amostra Inicial para o ponto de partida 
-qnt_results -> quantidade de resultados que devem ser tentado calcular 
-max_repetitive_tries -> Quantas gerações repitidadas devem ter nenhuma mudança significativa para seu resultado ser considerado ótimo 
-MAX_GENERATIONS -> Máximo de gerações que podem ser gerada 
-result_variations -> Variação minima entre resultados anteriores
+- population_size -> Tamanho das populações
+- default_variation -> Variação inicial das mutações 
+- bests_sample_size -> Tamanho da amostra de análise para definir novos parametros de mutação 
+- bests_sample_use_size -> Tamanho da amostra para definir os novos melhores individuos e reproduzi-los e gerações futuras
+- start_sample -> Amostra Inicial para o ponto de partida 
+- qnt_results -> quantidade de resultados que devem ser tentado calcular 
+- max_repetitive_tries -> Quantas gerações repitidadas devem ter nenhuma mudança significativa para seu resultado ser considerado ótimo 
+- MAX_GENERATIONS -> Máximo de gerações que podem ser gerada 
+- result_variations -> Variação minima entre resultados anteriores
