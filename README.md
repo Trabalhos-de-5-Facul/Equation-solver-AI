@@ -20,7 +20,7 @@
 		
 #### 				3 * x ** 4 + x ** 3 - 5 * x ** 2 + 46 * x - 543
 			
-			- Em resumo, o símbolo '^' que representa a elevação de um número por outro deverá ser substituido por '**'
+	- Em resumo, o símbolo '^' que representa a elevação de um número por outro deverá ser substituido por '**'
 
 	- O programa irá retornar aproximadamente as raizes desta função que seriam A = -4,15228364 e B = 3,40806689.
 	- A principio o programa está configurado para retornas 2 resulados 
