@@ -23,7 +23,7 @@ Durante a execução, será pedido ao usuário a inserção de uma função poli
 Em resumo, o símbolo '^' que representa a elevação de um número por outro deverá ser substituido por '**'
 
 O programa irá retornar aproximadamente as raizes desta função que seriam A = -4,15228364 e B = 3,40806689.
-A principio o programa está configurado para retornas 2 resulados 
+A principio o programa está configurado para retornar 2 resultados 
 ##### - Outros exemplos simples para teste seriam x\*\*2 + 2\*x que tem como raiz -2 e 0 e 10 \*x\*\*2-5 \*x-30 que tem como raiz -1.5 e 2
 Para calculo da Raizes utilizamos do Geogebra
 	
